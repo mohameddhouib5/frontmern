@@ -142,6 +142,8 @@ state.error=null;
 })
 .addCase(
 findArticleByID.fulfilled,(state, action) => {
+    state.articles =
+[ action.payload,...state.articles];
 state.isLoading = false
 state.error = null
 state.article=action.payload;

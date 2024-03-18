@@ -1,5 +1,4 @@
 import Api from "../Axios/Api";
-2
 const ARTICLE_API="/articles"
 export const fetchArticles=async()=> {
 return await Api.get(ARTICLE_API);
