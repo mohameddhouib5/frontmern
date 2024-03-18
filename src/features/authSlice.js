@@ -5,6 +5,7 @@ import withReactContent from 'sweetalert2-react-content'
 const MySwal = withReactContent(Swal)
 export const register = createAsyncThunk(
 "auth/register",
+
 async (user, thunkAPI) => {
 const { rejectWithValue } = thunkAPI;
 try{
@@ -90,6 +91,8 @@ MySwal.fire({
     .addCase(login.rejected, (state, action) => {
     state.isLoggedIn = false;
     state.user = null;
+    state.isSuccess=false;
+
     MySwal.fire({
     icon: 'error',
     title: 'Connection was refused',

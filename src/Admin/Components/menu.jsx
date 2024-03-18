@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 
-import {urlimage} from "../../Axios/Api"
+
 const NavScroll = () => {
     const mystyle = {
         color: "white",

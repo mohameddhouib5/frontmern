@@ -12,6 +12,7 @@ import Login from "./Admin/Components/Login";
 import Logout from "./Admin/Components/Logout";
 import { useSelector } from "react-redux";
 import ProtectedRoutes from "./Admin/ProtectedRoute";
+import Dashboard from "./Admin/Dashboard";
 
 function App() {
   const { isLoggedIn } = useSelector((state) => state.auth);
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/menu" element={<NavScroll />} />
         <Route element={<ProtectedRoutes/>}>
+          <Route path="/dashboard" element={<Dashboard/>}/>
           <Route path="/articles" element={<Listarticle />} />
          
           <Route path="/cart" element={<Cart />} />

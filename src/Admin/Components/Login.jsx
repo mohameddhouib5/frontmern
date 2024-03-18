@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../features/authSlice";
@@ -41,6 +41,13 @@ const Login = () => {
   const { isLoggedIn } = useSelector((state) => state.auth);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  useEffect(() => {
+    if (isLoggedIn) {
+    navigate('/menu')
+    }
+    }, [navigate, isLoggedIn])
+
 
   const handleSubmit = (event) => {
     event.preventDefault();

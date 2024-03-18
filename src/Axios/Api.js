@@ -15,4 +15,3 @@ Promise.reject(error)
 });
 
 export default axios;
-export const urlimage="http://localhost:3001/images/"
